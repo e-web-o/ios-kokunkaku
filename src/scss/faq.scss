@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@import 'import/reset';
+@import 'import/common';
+@import 'import/subCommon';
+// @import 'import/common2';
+
+/* CSS Document */
+
+h4.ch4 {
+	text-indent: initial;
+}
+
+@media (min-width:641px){
+	article { padding-bottom: 150px; }
+	#p1 h2 { margin:0 auto; width: 1000px; padding-top: 40px; }
+	.lead { text-align: center; padding: 0 0 60px;  }
+	.lead h3 { color: #4A1F00; font-size: 22px; margin-bottom: 20px; }
+	.lead p { font-size: 13px; line-height: 24px; text-align: center; }
+	/*#p1 .cmenu { margin-bottom: 60px; }*/
+	#p1 .cmenu li,#p1 .cmenu li a { width: 137px; width : -webkit-calc(1100px / 8) ; width : calc(1100px / 8) ; }
+	#p1 .cmenu li a:after { left:62px; }
+	#p1 .cmenu li a.l2 { line-height: 16px; }
+	#p1 .cmenu li a.l2 { padding-top: 5px; }
+	.cmenu li a:after {bottom: initial;top:50px;}
+
+
+	.f_box { padding-top: 80px; }
+	.f_box dl { border-left: #CBC1BD 1px solid; border-right: #CBC1BD 1px solid; 
+		border-bottom: #CBC1BD 1px solid; }
+	.f_box dt { font-size: 13px; padding: 20px 20px 20px 70px; border-top: #CBC1BD 1px solid;
+		text-align: left; background: url("../images/faq/icon_q.svg") 20px 13px no-repeat; text-align: left;
+		line-height: 24px; position: relative; cursor: pointer; }
+	.f_box dt:after { content: "\f107"; font-family: FontAwesome; color: #4A1F00; position: absolute;
+		top:20px; right: 13px;
+		-webkit-transition: 0.3s ease-in-out;
+		   -moz-transition: 0.3s ease-in-out;
+			 -o-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+		 }
+	/*.f_box dt.active { border-bottom: #6B442C 1px dashed; }*/
+	.f_box dt.active:after { content: "\f106"; }
+	.f_box dd { font-size: 13px; padding: 20px 20px 20px 70px; line-height: 24px; 
+		background: url("../images/faq/icon_a.svg") 20px 13px no-repeat; display: none;
+		/*border-bottom: #CBC1BD 1px solid;*/ text-align: left; position: relative; }
+	.f_box dd:before { content: ""; width: 1060px; height: 1px; border-top: #CBC1BD 1px solid;
+		position: absolute; top:0; left:20px; }
+	.f_box dd p { margin-bottom: 15px; }
+	.f_box dd ul { padding-left: 1em; }
+	.f_box dd ul li { list-style: disc; }
+	
+
+}
+@media (max-width:640px){
+	article { padding-bottom: 22vw; }
+	/*#p1 h2 { margin:0 auto; width: 1000px; padding-top: 40px; }*/
+	/*#p1 { margin-bottom: 22vw; }*/
+	/*#p1 h2 { margin:0 auto 6vw; width: 1000px; padding-top: 40px; }*/
+	#p1 .lead { width: 92vw; margin: 0 auto 12vw;  }
+	#p1 h3 { text-align: center; color: #4A1F00; font-size: 5vw; margin-bottom: 5.3vw; 
+		line-height: 6.8vw; }
+	#p1 p { line-height: 5.4vw; text-align: center; font-size: 3.3vw;
+		width: 92vw; margin: 0 auto 12vw; }
+	/*#p1 .cmenu { margin-bottom: 60px; }*/
+	/*#p1 .cmenu li,#p1 .cmenu li a { width: 137px; width : -webkit-calc(1100px / 8) ; width : calc(1100px / 8) ; }
+	#p1 .cmenu li a:after { left:62px; }
+	#p1 .cmenu li a.l2 { line-height: 16px; }
+	#p1 .cmenu li a.l2 { padding-top: 5px; }*/
+
+
+	.f_box { padding-top: 12vw; }
+	.f_box dl { border-left: #CBC1BD 1px solid; border-right: #CBC1BD 1px solid; 
+		border-bottom: #CBC1BD 1px solid; }
+	.f_box dt { font-size: 3.2vw; padding: 2vw 4vw 2vw 12vw; border-top: #CBC1BD 1px solid;
+		text-align: left; background: url("../images/faq/icon_q.svg") 4vw 1vw no-repeat; text-align: left;
+		background-size: 6vw auto;
+		line-height: 4.6vw; position: relative; }
+	.f_box dt:after { content: "\f107"; font-family: FontAwesome; color: #4A1F00; position: absolute;
+		top:2vw; right: 4vw;
+		 }
+	/*.f_box dt.active { border-bottom: #6B442C 1px dashed; }*/
+	.f_box dt.active:after { content: "\f106"; }
+	.f_box dd { font-size: 3.2vw; padding: 2vw 4vw 2vw 12vw; line-height: 4.6vw; 
+		background: url("../images/faq/icon_a.svg") 4vw 1vw no-repeat; display: none;
+		background-size: 6vw auto;
+		/*border-bottom: #CBC1BD 1px solid;*/ text-align: left; position: relative; }
+	.f_box dd:before { content: ""; width: 92vw; height: 1px; border-top: #CBC1BD 1px solid;
+		position: absolute; top:0; left:4vw; }
+	.f_box dd p { margin-bottom: 2vw; }
+	.f_box dd ul { padding-left: 1em; }
+	.f_box dd ul li { list-style: disc; }
+	
+
+}
+

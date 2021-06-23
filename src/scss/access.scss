@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+@import 'import/reset';
+@import 'import/common';
+@import 'import/subCommon';
+// @import 'import/common2';
+
+@media (min-width:641px){
+	article { padding-bottom: 80px; }
+	#p1 { margin-bottom: 100px; }
+	#p1 h2 { margin:0 auto 35px; width: 1000px; padding-top: 40px; }
+	#p1 h3 { text-align: center; margin-bottom: 30px; }
+	#p1 p { font-size: 13px; line-height: 24px; margin-bottom: 55px; text-align: center;
+	 }
+	#p1 ul {
+		height: 72px;
+		width: 1120px;
+		/*width: 1101px;*/
+		border-left: #C3B5A8 1px solid;
+		/*margin-bottom: 50px;*/
+		margin: 0 auto 50px;
+	}
+	#p1 ul li {
+		width: 366px;width : -webkit-calc(1100px / 3) ;
+		width : calc(1100px / 3) ;
+
+		height: 72px;
+		float: left;
+		border-right: #C3B5A8 1px solid;
+	}
+	#p1 ul li a {
+		display: block;
+		width: 366px;
+		width : -webkit-calc(1100px / 3);
+		width : calc(1100px / 3);
+		height: 72px;
+		font-size: 13px;
+		color: #4A1F00;
+		line-height: 40px;
+		position: relative;
+		text-align: center;
+	}
+	#p1 ul li a:after {
+		content: "";
+		position: absolute;
+		// bottom:8px;
+		top: 45px;
+		left:176px;
+		width: 14px;
+		height: 14px;
+		border-radius: 7px;
+		background: url("../images/icon_arrow_s.svg") center center no-repeat #4A1F00;
+		-webkit-transition: 0.3s ease-in-out;
+		-moz-transition: 0.3s ease-in-out;
+		-o-transition: 0.3s ease-in-out;
+		transition: 0.3s ease-in-out;
+		}
+	#p1 ul li a:hover { opacity: 1; }
+	#p1 ul li a:hover:after { background-color: #AC9614; bottom: 6px; }
+	#gmap { width: 100%; height: 500px; margin-top: -80px; padding-top: 80px; }
+	#map-canvas { width:100%;height:500px; }
+	#map-canvas iframe { width:100%;height:500px; }
+	.hotelinfo { margin-top: -80px; background: #FFFFFF; position: relative; height: 345px; }
+	.hotelinfo img.imgfade1 { position: absolute; top:42px; left: 40px; width: 380px; }
+	.hotelinfo .txt { position: absolute; top:42px; right:40px; width: 610px; height: 260px; }
+	.hotelinfo .txt a { display: block; position: absolute; top:0; right: 0; 
+		 }
+	.hotelinfo .txt .cdl { width: 610px; bottom: 0; position: absolute; }
+	.hotelinfo .txt .cdl dt { width: 130px; }
+	.hotelinfo .txt .cdl dd { width: 480px; }
+
+	#p2 { margin-top: -80px; padding-top: 80px; }
+	#p2 h3 { text-align: center; margin-bottom: 50px; }
+	.root { margin-bottom: 90px; }
+	.root h4 { margin-bottom: 15px; }
+	.root p { font-size: 13px; line-height: 24px; margin-bottom: 30px; }
+
+	#p3 { margin-top: -80px; padding-top: 80px; }
+	#bus { width: 100%; margin: 0 auto 80px; background: #ffffff;
+		position: relative; height: 23vw; }
+	#bus img.imgfade1 { width: 50%; height: 23vw; position: absolute; top:0; left: 0; }
+	#bus .txt { width: 550px; position: absolute; top:11.5vw; margin-top: -9vw; left: 50%; padding: 0 50px 0 60px; }
+	#bus h3 { padding: 0 0 2vw; text-align: center; }
+	#bus p { font-size: 13px; line-height: 1.2vw; margin-bottom: 25px; color: #231815; }
+	#bus .ctable2 { width: 440px; line-height: 1.1vw; }
+
+}
+@media (max-width:640px){
+	article { padding-bottom: 22vw; }
+	#p1 { margin-bottom: 22vw; }
+	/*#p1 h2 { margin:0 auto 6vw; width: 1000px; padding-top: 40px; }*/
+	#p1 h3 { text-align: center; color: #4A1F00; font-size: 5vw; margin-bottom: 5.3vw; 
+		line-height: 6.8vw; }
+	#p1 p { line-height: 5.4vw; text-align: center; font-size: 3.3vw;
+		width: 92vw; margin: 0 auto 12vw; }
+	#p1 .cmenu { margin-bottom: 12vw; }
+	/*#p1 ul { height: 72px; width: 1101px; border-left: #C3B5A8 1px solid; margin-bottom: 50px; }
+	#p1 ul li { width: 366px;width : -webkit-calc(1100px / 3) ; width : calc(1100px / 3) ; 
+		height: 72px; float: left; border-right: #C3B5A8 1px solid; }
+	#p1 ul li a { display: block; width: 366px;width : -webkit-calc(1100px / 3) ; 
+		width : calc(1100px / 3) ; height: 72px; font-size: 13px; color: #4A1F00;
+		line-height: 40px; position: relative; text-align: center; }
+	#p1 ul li a:after { content: ""; position: absolute;
+		bottom:8px; left:176px; width: 14px; height: 14px; border-radius: 7px; 
+		background: url("../../images/icon_arrow_s.svg") center center no-repeat #4A1F00;
+		-webkit-transition: 0.3s ease-in-out;
+		   -moz-transition: 0.3s ease-in-out;
+			 -o-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+		 }
+	#p1 ul li a:hover { opacity: 1; }
+	#p1 ul li a:hover:after { background-color: #AC9614; bottom: 6px; }
+	#gmap { width: 100%; height: 500px; margin-top: -80px; padding-top: 80px; }*/
+	#map-canvas { width:100%; height:55vw; }
+	#map-canvas iframe { width:100%; height:55vw; }
+	.hotelinfo { margin-top: 4vw; background: #FFFFFF; }
+	.hotelinfo img.imgfade1 { margin-bottom: 4vw; }
+	.hotelinfo .txt { /*position: absolute; top:42px; right:40px;*/ width: 100%; }
+	.hotelinfo .txt img { padding: 4vw; }
+	.hotelinfo .txt a { display: block; 
+		 }
+	.hotelinfo .txt .cdl { width: 100%; }
+	/*.hotelinfo .txt .cdl dt { width: 130px; }
+	.hotelinfo .txt .cdl dd { width: 480px; }*/
+	.hotelinfo .txt dl.cdl dt, .hotelinfo .txt dl.cdl dd { text-align: left; line-height: 4.6vw; 
+		height: auto; }
+	.hotelinfo .txt dl.cdl dt { padding: 2vw 4vw; width: 100%; border-bottom: none; }
+	.hotelinfo .txt dl.cdl dd { border-bottom: #CDC2BB 1px solid; width: 100%; padding: 0 4vw 2vw; }
+	.hotelinfo .txt dl.cdl dt.l2, .hotelinfo .txt dl.cdl dd.l2 { height: auto; }
+
+	#p2 { margin-top: -18vw; padding-top: 18vw; }
+	/*#p2 h3 { text-align: center; margin-bottom: 50px; }*/
+	.root { margin-bottom: 90px; text-align: center; }
+	.root h4 { margin-bottom: 2vw; padding-left: 4vw; height: 7vw; text-align: left; }
+	.root h4 img { height: 7vw; }
+	.root p { font-size: 3.2vw; line-height: 4.6vw; margin-bottom: 4vw; padding: 0 4vw; }
+	.root img.for_sp { width: 92vw; margin-bottom: 4vw; }
+
+	#p3 { margin-top: -18vw; padding-top: 18vw; }
+	#bus { width: 100%; margin: 0 auto; background: #ffffff; padding: 4vw;
+		 }
+	#bus img.imgfade1 { width: 100%; margin-bottom: 4vw; }
+	#bus .txt { width: 100%; margin: 0 auto; }
+	#bus h3 { padding: 0 0 4vw; text-align: center; }
+	#bus p { font-size: 3.2vw; line-height: 4.6vw; margin-bottom: 4vw; color: #231815; }
+	#bus .ctable2 { width: 100%; }
+}

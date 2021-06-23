@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@import 'import/reset';
+@import 'import/common';
+@import 'import/common2';
+
+// intro 
+.intro {
+    background-color: rgba(137, 127, 40, 0.12);
+    position: relative;
+    .inner {
+        @include pc {
+            height: 830px;
+            h3, img, p {
+                position: absolute;
+            }
+            h3 {
+                top: 100px;
+                left: 100px;
+                width: 100px;
+            }
+            .img {
+                top: 163px;
+                right: 0
+            }
+            p {
+                left: 0;
+                bottom: 20px;
+            }
+        }
+        @include sp {
+            .sp-inner {
+                display: flex;
+                justify-content: space-between;
+                margin: 10vw 0;
+            }
+            h3 {
+                flex: 1;
+                text-align: center;
+                img {
+                    width: 50%;
+                }
+            }
+            .img {
+                height: 45vh;
+            }
+            p {
+                padding: 0 10vw;
+            }
+            background-image: url(../images/intro_bg_sp.png);
+            background-size: cover;
+        }
+    }
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include pc {
+            width: 100%;
+            height: 830px;
+            background-image: url(../images/worcation/img01_intro_bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+// vip 
+.vip {
+    @include pc {
+        padding: 50px 0 100px;
+    }
+    @include sp {
+        padding: 10vw 0;
+    }
+    .inner {
+        position: relative;
+        .img {
+            @include pc {
+                display: flex;
+                justify-content: space-between;
+                margin: 76px 0 40px;
+            }
+            padding: 5vw 10vw;
+            @include sp {
+                img {
+                    padding: 5vw 0;
+                }
+            }
+        }
+        .mark {
+            position: absolute;
+            @include pc {
+                top: 10px;
+                right: 20px;
+                width: 110px;
+                img {
+                    width: 110px;
+                }
+            }
+            @include sp {
+                top: 25vw;
+                right: 5vw;
+                width: 15vw;
+                img {
+                    width: 15vw;
+                }
+            }
+        }
+        p {
+            @include sp {
+                padding: 0 10vw;
+            }
+        }
+    }
+}
+
+// meeting 
+.meeting {
+    @include pc {
+        margin-bottom: 100px;
+    }
+    .inner {
+        @include pc {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        .text {
+            @include pc {
+                width: 480px;
+            }
+            h2 {
+                color: $headline_color;
+                width: 100%;
+                @include pc {
+                    padding-top: 1.8em;
+                    font-size: 28px;
+                    line-height: 1;
+                    text-align: left;
+                    margin-bottom: 1em;
+                }
+                @include sp {
+                    font-size: 4.6vw;
+                    text-align: center;
+                }
+                span {
+                    display: block;
+                    letter-spacing: 1.5px;
+                    color: $gold_color;
+                    @include pc {
+                        margin-top: 1em;
+                        font-size: 15px;
+                        line-height: 1;
+                    }
+                    @include sp {
+                        font-size: 3.8vw;
+                    }
+                }
+            }
+            p {
+                color: $text_color;
+                @include pc {
+                    font-size: 18px;
+                    line-height: 36px;
+                    margin-bottom: 1em;
+                }
+                @include sp {
+                    padding: 10vw;
+                    font-size: 3.8vw;
+                    line-height: 1.8;
+                }
+            }
+            .link.white {
+                background-color: #fff;
+                background-image: url(../images/icon_arrow_rightyellow.svg);
+                background-repeat: no-repeat;
+                display: inline-block;
+                @include pc {
+                    background-position: 28px center;
+                    background-size: 18px;
+                }
+                @include sp {
+                    background-position: 1em center;
+                    background-size: 3.8vw;
+                    margin: 0 10vw 10vw;
+                }
+                a {
+                    color: $text_color;
+                    text-indent: 3em;
+                    display: block;
+                    padding: 1em;
+                    text-align: center;
+                }
+            }
+        }
+        img {
+            @include sp {
+                width: 80vw;
+                margin: 0 10vw 20vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,557 @@
+@charset "UTF-8";
+
+@import 'import/reset';
+@import 'import/common';
+@import 'import/common2';
+
+// intro 
+.intro {
+    background-color: rgba(137, 127, 40, 0.12);
+    position: relative;
+    .inner {
+        @include pc {
+            height: 827px;
+            h3, .img, p {
+                position: absolute;
+            }
+            h3 {
+                top: 100px;
+                left: 100px;
+                img {
+                    width: 100px;
+                }
+            }
+            .img {
+                top: 160px;
+                right: 0
+            }
+            p {
+                left: 0;
+                bottom: 96px;
+            }
+        }
+        @include sp {
+            .sp-inner {
+                display: flex;
+                justify-content: space-between;
+                margin: 10vw 0;
+            }
+            h3 {
+                flex: 1;
+                text-align: center;
+                img {
+                    width: 50%;
+                }
+            }
+            .img {
+                height: 45vh;
+            }
+            p {
+                padding: 0 10vw;
+            }
+            background-image: url(../images/intro_bg_sp.png);
+            background-size: cover;
+        }
+    }
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include pc {
+            width: 100%;
+            height: 827px;
+            background-image: url(../images/sightseeing/img01_intro_02.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+// nav 
+.nav {
+    width: 100%;
+    @include pc {
+        margin: 100px 0 0;
+        ul {
+            height: 180px;
+            li {
+                width: 450px;
+            }
+        }
+    }
+    @include sp {
+        ul {
+            width: 100%;
+            li {
+                border-bottom: 1px solid #6D554D;
+                background-image: url(../images/icon_arrow_bottomyellow_circle.svg);
+                background-size: 5.4vw;
+                background-repeat: no-repeat;
+                background-position: right 10vw center;
+                a {
+                    display: block;
+                    font-size: 4vw;
+                    padding: 1em 10vw;
+                }
+            }
+        }
+    }
+}
+
+// text before line 
+.text-before-line {
+    display: flex;
+    align-items: center;
+    @include pc {
+        margin-left: 80px;
+    }
+    @include sp {
+        margin-left: 2.5em;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background-color: #6D554D;
+        @include pc {
+            width: 60px;
+            margin-left: -80px;
+        }
+        @include sp {
+            width: 2em;
+            margin-left: -2.5em;
+        }
+    }
+}
+
+// major 
+.major {
+    .inner {
+        @include sp {
+            padding: 0 10vw;
+        }
+        h2 {
+            @include pc {
+                margin-bottom: 60px;
+            }
+            @include sp {
+                margin: 2em 0
+            }
+        }
+        .bloc {
+            @include pc {
+                width: 100%;
+                margin-bottom: 100px;
+            }
+            @include sp {
+                width: 100%;
+                margin-bottom: 10vw;
+            }
+            h3 {
+                @include pc {
+                    font-size: 28px;
+                }
+                @include sp {
+                    margin-top: .5em;
+                    font-size: 4.6vw;
+                }
+            }
+            p {
+                margin: 1em 0;
+            }
+            .white50-box {
+                background-color: rgba(255, 255, 255, 0.5);
+                text-align: center;
+                padding: .5em;
+                color: $text_color;
+                @include pc {
+                    width: 250px;
+                    font-size: 18px;
+                }
+                @include sp {
+                    width: 100%;
+                    font-size: 3.8vw;
+                }
+            }
+            .link-area {
+                display: flex;
+                justify-content: space-between;
+                @include pc {
+                    width: 520px;
+                }
+                @include sp {
+                    width: 100%;
+                }
+                .link {
+                    @include pc {
+                        width: 250px;
+                    }
+                    @include sp {
+                        width: 100%;
+                    }
+                    a {
+                        text-align: center;
+                        display: block;
+                        @include pc {
+                            width: 250px;
+                            height: 65px;
+                            font-size: 18px;
+                            line-height: 65px;
+                        }
+                        @include sp {
+                            width: 100%;
+                            font-size: 3.8vw;
+                            padding: 1em;
+                        }
+                    }
+                }
+                .link.gold {
+                    background-color: $gold_color;
+                    background-image: url(../images/icon_arrow_rightwhite.svg);
+                    background-repeat: no-repeat;
+                    @include pc {
+                        background-position: 50px center;
+                        background-size: 20px;
+                    }
+                    @include sp {
+                        background-position: 1em center;
+                        background-size: 3.8vw;
+                    }
+                    a {
+                        color: #fff;
+                        text-indent: 1.5em;
+                    }
+                }
+                .link.white {
+                    background-color: #fff;
+                    background-image: url(../images/icon_arrow_rightyellow.svg);
+                    background-repeat: no-repeat;
+                    @include pc {
+                        background-position: 50px center;
+                        background-size: 20px;
+                    }
+                    @include sp {
+                        background-position: 1em center;
+                        background-size: 3.8vw;
+                    }
+                    a {
+                        color: $text_color;
+                        text-indent: 2em;
+                    }
+                }
+            }
+        }
+        .bloc.bloc-top {
+            img {
+                @include pc {
+                    margin: 30px 0;
+                }
+                @include sp {
+                    margin: 1em 0;
+                }
+            }
+            .description {
+                width: 100%;
+                position: relative;
+                @include pc {
+                    margin-bottom: 50px;
+                }
+                @include sp {
+                    margin-bottom: 1em;
+                }
+                .white50-box {
+                    @include pc {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .bloc.bloc-double {
+            img {
+                @include pc {
+                    width: 520px;
+                    height: 330px;
+                }
+                @include sp {
+                    width: 100%;
+                }
+            }
+            display: flex;
+            @include pc {
+                justify-content: space-between;
+            }
+            @include sp {
+                flex-wrap: wrap;
+            }
+            .description {
+                @include pc {
+                    width: 520px;
+                }
+                @include sp {
+                    width: 100%;
+                }
+                .white50-box {
+                    @include pc {
+                        margin-bottom: 30px;
+                    }
+                    @include sp {
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// other 
+.other {
+    @include pc {
+        margin-bottom: 187px;
+    }
+    @include sp {
+        margin-bottom: 20vw;
+        padding: 0 10vw;
+    }
+    .inner {
+        h2 {
+            @include pc {
+                margin-bottom: 60px;
+            }
+            @include sp {
+                margin-bottom: 1em;
+            }
+        }
+        .bloc-area {
+            display: flex;
+            flex-wrap: wrap;
+            @include pc {
+                justify-content: space-between;
+            }
+            @include sp {
+                justify-content: space-around;
+            }
+            .other-bloc {
+                position: relative;
+                @include pc {
+                    width: 340px;
+                    margin-bottom: 10vw;
+                }
+                @include sp {
+                    width: 100%;
+                    margin-bottom: 60px;
+                }
+                img {
+                    @include pc {
+                        width: 340px;
+                        height: 220px;
+                        margin-bottom: 24px;
+                    }
+                    @include sp {
+                        width: 100%;
+                        margin-bottom: 10vw;
+                    }
+                }
+                h3 {
+                    position: relative;
+                    @include pc {
+                        font-size: 22px;
+                        margin-bottom: 24px;
+                    }
+                    @include sp {
+                        font-size: 4.6vw;
+                        margin-bottom: 1em;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 1px;
+                        background-color: #000;
+                        @include pc {
+                            top: 40px;
+                            left: 0;
+                            width: 23px;
+                        }
+                        @include sp {
+                            top: 2.5vw;
+                            left: 0;
+                            width: 4.6vw;
+                        }
+                    }
+                }
+                p {
+                    margin-bottom: 1em;
+                    @include pc {
+                        font-size: 18px;
+                        line-height: 36px;
+                    }
+                    @include sp {
+                        font-size: 3.8vw;
+                        line-height: 1.8;
+                    }
+                }
+                .white50-box {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    text-align: center;
+                    padding: .5em;
+                    color: $text_color;
+                    display: inline-block;
+                    @include pc {
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                    }
+                    @include sp {
+                        font-size: 3.8vw;
+                        margin-bottom: 1em;
+                    }
+                }
+                .link-area {
+                    display: flex;
+                    justify-content: space-between;
+                    @include pc {
+                        width: 340px;
+                    }
+                    @include sp {
+                        width: 100%;
+                    }
+                    .link {
+                        @include pc {
+                            width: 165px;
+                        }
+                        @include sp {
+                            width: 100%;
+                        }
+                        a {
+                            text-align: center;
+                            display: block;
+                            @include pc {
+                                width: 165px;
+                                height: 50px;
+                                font-size: 16px;
+                                line-height: 50px;
+                            }
+                            @include sp {
+                                width: 38vw;
+                                margin: 1vw;
+                                padding: 1em;
+                                font-size: 3.8vw;
+                            }
+                        }
+                    }
+                    .link.gold {
+                        background-color: $gold_color;
+                        background-image: url(../images/icon_arrow_rightwhite.svg);
+                        background-repeat: no-repeat;
+                        @include pc {
+                            background-position: 28px center;
+                            background-size: 18px;
+                        }
+                        @include sp {
+                            background-position: 1em center;
+                            background-size: 3.8vw;
+                        }
+                        a {
+                            color: #fff;
+                            text-indent: .5em;
+                        }
+                    }
+                    .link.white {
+                        background-color: #fff;
+                        background-image: url(../images/icon_arrow_rightyellow.svg);
+                        background-repeat: no-repeat;
+                        @include pc {
+                            background-position: 28px center;
+                            background-size: 18px;
+                        }
+                        @include sp {
+                            background-position: 1em center;
+                            background-size: 3.8vw;
+                        }
+                        a {
+                            color: $text_color;
+                            text-indent: 1em;
+                        }
+                    }
+                }
+                .bloc-down {
+                    @include pc {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .banner-area {
+        @include pc {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        @include sp {
+            margin-top: 10vw;
+        }
+        // card-img 
+        .card-img {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            background-color: #fff;
+            margin-bottom: 10px;
+            .text-area {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include pc {
+                    width: 315px;
+                }
+                @include sp {
+                    width: 100%;
+                }
+                .text {
+                    text-align: left;
+                    position: relative;
+                    @include pc {
+                        font-size: 22px;
+                    }
+                    @include sp {
+                        font-size: 3.8vw;
+                    }
+                    .icon {
+                        position: absolute;
+                        top: 0;
+                        left: -35px;
+                    }
+                    .sub-text {
+                        display: block;
+                        color: $gold_color;
+                        @include pc {
+                            font-size: 15px;
+                        }
+                        @include sp {
+                            font-size: 3vw;
+                        }
+                    }
+                }
+            }
+            .img-area {
+                @include pc {
+                    img {
+                        width: 100%;
+                    }
+                }
+                @include sp {
+                    img {
+                        width: 35vw;
+                    }
+                }
+            }
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+}

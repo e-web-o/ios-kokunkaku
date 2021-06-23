@@ -1,0 +1,8 @@
+.animsition, .animsition-overlay,.img_hidden,.showup { opacity: 1; }
+.loading-area { background: none; z-index: 0; width: 0; height: 0; }
+.loadeing-logo-area { display: none; }
+.slide_i li:nth-child(n+2) { display: none; }
+#p1 { display: block; }
+
+.ns_show { display: block; }
+.ns_hide { display: none !important; }
